@@ -2,6 +2,8 @@
 class ResultsHandler:
     def __init__(self, board):
         self.board = board
+        self.counter_x_player = 0
+        self.counter_o_player = 0
         self.board_size = len(self.board)
         self.empty = ' '
         self.DIAGONAL_WIN_CONDITION = [(0, 4, 8), (2, 4, 6)]

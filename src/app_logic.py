@@ -15,8 +15,11 @@ class AppLogic:
         def index():
             winner = self.result_handler.check_winner()
             draw = self.result_handler.check_draw()
+            x_wins = 0
+            o_wins = 0
             return render_template('index.html', board=self.board,
-                                   current_player=self.current_player, winner=winner, draw=draw)
+                                   current_player=self.current_player, winner=winner, draw=draw,
+                                   x_wins=x_wins, o_wins=o_wins)
 
         @self.app.route('/play/<int:cell>')
         def play(cell):
